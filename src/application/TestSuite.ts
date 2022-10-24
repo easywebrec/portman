@@ -308,7 +308,6 @@ export class TestSuite {
           optSchemaValidation &&
           optSchemaValidation.enabled &&
           content?.schema &&
-          (contentType === 'application/json' || contentType.includes('json')) &&
           !inOperations(pmOperation, optSchemaValidation?.excludeForOperations)
         ) {
           pmOperation = testResponseJsonSchema(
